@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  line_id: 1
+  stop_id: 1
+  time: 2019-03-14 02:07:19
+
+two:
+  line_id: 1
+  stop_id: 1
+  time: 2019-03-14 02:07:19
