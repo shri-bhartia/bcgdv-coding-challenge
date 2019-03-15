@@ -1,11 +1,14 @@
 Setup:
+
 1. This project was built using Rails 5.0.7.2 and Ruby 2.3.4
 2. Once you are done cloning the project and running “bundle install”, please make sure to
 run “rake db:seed”. The function call in the seeds.rb file refreshes the data by deleting
 old records (if any), and parsing the CSV files. It then populates the database with new
 data. This data forms the backbone of the APIs/application, so running “rake db:seed” is
 required.
+
 Assumptions:
+
 1. I have assumed that a line is representative of a vehicle. Therefore, vehicle and line have
 been interchangeably used in some places.
 2. I have assumed that delay values will get added to the arrival/departure times in
@@ -24,7 +27,9 @@ passed in the same “HH:MM:SS” format as problem 1.
 6. I assumed (and ensure through validations) that the location of every stop (combination
 of x and y) is unique
 7. A TimeModel record (a row of the times.csv file) can belong to a single stop and line.
+
 Design Choices:
+
 1. I chose to use the database instead directly using csv data, so I could take advantage of
 ActiveRecord features, Rails validations (through models), and associations on model
 objects. Additionally, this would also be a more efficient choice for larger amounts
